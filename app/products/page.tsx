@@ -1,3 +1,5 @@
+import AddProduct from "./addProduct"
+
 type Product = {
     id: number,
     title: string,
@@ -22,6 +24,7 @@ export default async function ProductList() {
     const products : Product[] = await getProduct()
   return (
     <div>
+        <AddProduct/>
                 <table className="table w-full text-base">
                     <thead className="text-base">
                         <tr>
