@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Next Öğreniyorum](https://www.youtube.com/watch?v=A4XsMMiNb40)
+
+```bash
+json-server -w db.json -p 5000
+```
+
+### İzleme
+
+```bash
+http://localhost:5000/products
+http://localhost:5000/products/1
+```
 
 ## Getting Started
 
