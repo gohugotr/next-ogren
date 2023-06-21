@@ -17,14 +17,13 @@ async function getProduct() {
     return res.json()
 }
 
-
-
-
 export default async function ProductList() {
     const products : Product[] = await getProduct()
   return (
-    <div>
-        <AddProduct/>
+    <div className="p-10">
+       <div className="py-2"> 
+                <AddProduct />
+       </div>
                 <table className="table w-full text-base">
                     <thead className="text-base">
                         <tr>
@@ -35,7 +34,7 @@ export default async function ProductList() {
                         </tr>
                     </thead>
                     <tbody>
-                      {  
+                    {  
                       products.map((product, index)=>(
                             <tr key={product.id}>
                                 <td>{index + 1}</td>
@@ -43,8 +42,8 @@ export default async function ProductList() {
                                 <td>{product.price}</td>
                                 <td>
                                     <div className="flex">
-                                    <button className="mr-2 bg-lime-600">Ekle</button>
-                                    <button className="bg-red-600 ">Sil</button>
+                                    <button className="w-20 p-1 mr-2 text-white rounded-lg bg-lime-600">Ekle</button>
+                                    <button className="w-20 p-1 text-white bg-red-600 rounded-lg">Sil</button>
                                     </div> 
                                 </td>
                             </tr>
@@ -52,8 +51,6 @@ export default async function ProductList() {
                     }
                     </tbody>
                 </table>
-           
-       
     </div>
   )
 }
